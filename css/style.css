@@ -1,147 +1,207 @@
-/* Imported Typeface Files */
+/* General setup */
 
-@font-face {
-    font-family:Lato;
-    src: url(../fonts/lato-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
+* {
+    box-sizing: border-box;
 }
-@font-face {
-
-    font-family:Alfa Slab One;
-    src: url(../fonts/alfa-slab-one-regular.ttf);
-    font-style:normal;
-    font-weight:normal;
-}
-
-
-/* Root */
 
 html {
     font-size:16px;
 }
 
-
-/* Body & Main  */
-
 body {
-    font-family:Lato, Arial, sans-serif;
-    font-size:1rem;
-    padding:1rem;
-    min-width:39rem;
-    max-width:50rem;
-    margin:0 auto;
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
 }
+
+/* Layout */
+
 main {
-    background-color:#ddd;
-    background-image:url(/images/wrinkled-white-paper-background.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    border:1px solid #333;
+    overflow:auto;
+    min-width:45rem;
+    
+}
+
+section {
+    float: left;
+    min-width: 22.5rem;
+    width:50%;
+}
+
+figure {
+    width:60%;
+    margin:0 10% 0 0;
+    float:left;
+}
+
+figure img {
+    width:100%;
+    max-width:25rem;
+}
+
+figcaption {
+    margin:.375rem 0;
+}
+
+.long-list {
+    margin-top:0;
+}
+
+nav {
+    float: left;
+    width:11.25rem;
+}
+
+footer {
+    clear: both;
+    margin-top:1.5rem;
+}
+
+section, aside, nav, footer {
+  padding: .5rem;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: .125rem solid #33658A;
+  border-bottom: .125rem solid #33658A;
 }
 
 /* ------ START WRITING YOUR CODE BELOW THIS LINE ------ */
 
-/* NO changes should be made to any of the code above. */
-
-/* The first heading style rule has been completed for you. Examine it carefully
-   to get an idea of some of the style properties you will need to use; then
-   complete the style code according to the instructions in Canvas. */
+/* NO changes should be made to any of the code above. */ 
 
 /* NOTE: While you will be using some of the same CSS properties, the VALUES 
    may need to be different in order to style the page correctly. */
 
 
-/* Headings  */
 
+/* Imported Typfaces */
+
+@font-face{
+font-family: montserrat;
+src: url(fonts/montserrat-regular.ttf) format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face{
+font-family: josefinslab;
+src: url(fonts/josefinslab-regular.ttf) format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+
+/* Typography Styles */
+
+html {
+font-family: montserrat, arial, sans-serif;
+}
+
+h1, h2{
+font-family: josefinslab, georgia, serif; 
+letter-spacing: 0.125rem;
+
+} 
 h1 {
-    text-transform: uppercase;
-    font-size:6rem;
-    margin: 0;
-    letter-spacing: .5rem;
-    color:darkred;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    font-family:'Alfa Slab One', Garamond, serif;
-    text-align:center;
+font-size: 3.75rem;
+margin: 1.125rem;
+text-align: center;
 }
 h2 {
-    text-transform: uppercase;
-    color:darkred;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    font-family:'Alfa Slab One', Garamond, serif;
-    font-size: 3rem;
-    letter-spacing: 0.25rem;
-    text-align:center;
-    font-weight: normal;
+font-size: 1.5rem;
 }
 
-h3 {
-    text-transform: uppercase;
-    color:rgb(12, 23, 228);
-    text-shadow:.09375rem .09375rem .09375rem #8e8a8a;
-    font-family:'Alfa Slab One', Garamond, serif;
-    font-size: 2rem ;
-    font-weight: normal;
-    text-align:center;
-}
-
-h4 {
-    text-transform: uppercase;
-    color:darkred;
-    text-shadow:.09375rem .09375rem .09375rem #000;
-    font-family:'Alfa Slab One', Garamond, serif;
-    font-size: 1.5rem;
-    letter-spacing: 0.25rem;
-    font-weight: normal;
-    padding-bottom: 1.125rem;
-    text-align:center;
-}
-
-h5 {
-    font-size: 1rem;
-    margin-top: 0.25rem;
-    padding: 0.5rem;
-    background-color: #333;
-    color: #fff;
-    font-weight: normal;
-    text-align: center;
-}
-
-/* Section & Paragraph */
-section{
-    margin-top: 0.5rem;
+h2 + p {
+text-indent: 1.25rem;
 }
 
 p {
-    margin: 1rem auto;
-    padding: 0 1rem;
-    width: 90%;
-    text-align: left;
+font-size: 0.75rem;
+letter-spacing: 0.03125rem;
+word-spacing: 0.125rem;
 }
 
-
-/* Image & Figure */
-img {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 50rem;
-}
-
-figure {
-    margin-bottom: 2rem;
+li {
+font-size: 0.75rem;
+letter-spacing: 0.03125rem;
+word-spacing: 0.125rem;
 }
 
 figcaption {
-    padding-top: 0.5rem;
-    text-align: right;
+font-size: 0.75rem;
+margin-bottom: 2rem;
+
 }
-h4>span{
-    padding: 0 0.5rem;
+/* Link Styling */
+
+a{
+outline: none;
 }
 
-/* Footer */
-footer {
-    padding: 1rem;
-    border-top: 2rem solid #333;
+a:link, a:visited{
+color: #33658a;
 }
+
+a:focus,a:hover {
+text-decoration: none;
+}
+
+/* List Styling */
+
+ul {
+margin: 1rem 0;
+list-style-type: square;
+}
+
+ol {
+margin: 1rem 0;
+list-style-type: lower-alpha;
+}
+
+.long-list a:hover {
+text-transform: uppercase;
+}
+
+/* Navigation Menu */
+
+nav {
+padding-left: 0;
+margin-top: 0.25rem;
+}
+
+nav a {
+text-decoration: none;
+display: inline-block;
+width: 100%;
+line-height: 3;
+text-align: center;
+font-size: 1.125rem;
+margin-bottom: 1.5rem;
+border: 0.0625rem solid #33658a;
+}
+
+nav a:focus, nav a:hover {
+color: #fff;
+background-color: #33658a;
+}
+
+nav a:active {
+color: #fff;
+background-color: #000;
+}
+
+
+
+
+/* Footer Styles */
+
+footer {
+text-align: center;
+}
+
+
+
+
 
