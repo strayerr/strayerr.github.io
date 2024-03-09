@@ -1,0 +1,220 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* Imported Fonts */
+@font-face {
+    font-family: 'josefinslab';
+    src: url("../fonts/serif/josefinslab-regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lato';
+    src: url("../fonts/sans-serif/lato-regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url("../fonts/serif/robotoslab-regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Typography */
+p {
+    font-family: lato, arial, sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: josefinslab, helvetica, sans-serif;
+}
+h1{
+    font-size: 4rem;
+    letter-spacing: 0.25rem;
+    transform: rotate(-3.50deg);
+}
+.highlight{
+    display: inline-block;
+    font-family: roboto, Georgia, serif;
+    border: 1px solid black;
+    padding: 1rem 1.75rem;
+    padding-right: 1.2rem;
+    border-radius: 0.4rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #b8a441;
+    background-color:#253C4E;
+    box-shadow: 5px 5px 4px 1px #888;
+}
+
+/*General setup and defaults */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+/* Layout */
+header{
+    padding: 0.5rem .01rem;
+}
+nav{
+    margin-top: 3rem;
+}
+.main-section{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 1px solid #5C521F;
+    padding: 1rem;
+}
+aside p {
+    border-bottom: 1px solid #5C521F;
+    padding-bottom: 0.5rem;
+}
+.subsection {
+    display: flex;
+}
+footer{
+    font-size: 12px;
+}
+.ellipses{
+    font-size:.5rem;
+}
+/* Images and figures */
+
+img{
+    width: 100%;
+}
+figure {
+    margin: 0px;
+}
+.article-image{
+    width: 33%;
+    float: left;
+    margin-right: 1rem;
+}
+.subsection{
+    margin: 1rem 0rem;
+}
+.subsection figure{
+    margin: 0rem 0.25rem;
+    background-color: #DBCBBB;
+}
+.subsection figure figcaption{
+    padding: 0.5rem 0.5rem;
+}
+button{
+    display: inline-block;
+    font-family: roboto, Georgia, serif;
+    border: 1px solid black;
+    padding: 1rem 1.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.4rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #b8a441;
+    background-color:#253C4E;
+    box-shadow: 5px 5px 4px 1px #888;
+}
+/* links and navigation */
+a{
+    text-decoration: none;
+}
+nav a{
+    display: inline-block;
+    padding: 1.25rem 1rem;
+    font-size: 1.35rem;
+    font-family: lato, arial, sans-serif;
+    color: #5C521F;
+}
+nav{
+    border-top: 1px solid #251F29;
+    border-bottom: 1px solid #251F29;
+}
+nav a:focus, nav a:hover {
+    color: #fff;
+    background-color: #33658a;
+    }
+    
+    nav a:active {
+    color: #fff;
+    background-color: #000;
+    }   
+   /* link styling*/
+   a{
+    outline: none;
+    } 
+  a:link, a:visited{
+    color: #33658a;
+    }
+  a:focus,a:hover {
+    text-decoration: none;
+    }
+
